@@ -1,0 +1,16 @@
+{
+  "revision": "BODY-2",
+  "interface": "PTZ-INTERFACE-1",
+  "shell_rings_z_rx_ry": [[10,100,85],[75,105,88],[140,97,83],[190,84,74],[214,64,64]],
+  "wall_axis_offset": 2.4,
+  "bottle_base_z": 8,
+  "bottom_opening_radius": 50,
+  "bottle_cradle_radial_gap": 1.5,
+  "frame_posts_xy": [[-58,-38],[-58,38],[58,-38],[58,38]],
+  "pi_translation": [-62.5,-28,150],
+  "electronics_tray_bottom": 140,
+  "electronics_tray_thickness": 4,
+  "pi_standoff_height": 6.03,
+  "camera_route_fixed": [[-13.43,-19.5,154.4],[-50,-45,173],[-68,-48,186],[-66,-30,239]],
+  "notes": "Independent body module ends at PTZ foot plane. Lower plate removes without releasing structural ring or four threaded chassis rods."
+}

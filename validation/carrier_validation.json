@@ -1,0 +1,263 @@
+{
+  "revision": "CARRIER-2.2-FIT-TEST",
+  "config": {
+    "revision": "CARRIER-2.2-FIT-TEST",
+    "pump_side_clearance_mm": 2.0,
+    "pump_bottom_padding_allowance_mm": 0.5,
+    "pump_rear_clearance_mm": 3.0,
+    "side_wall_thickness_mm": 2.0,
+    "strap_stations_world_y_mm": [
+      -68.0,
+      -42.0
+    ],
+    "strap_slot_width_mm": 2.5,
+    "strap_slot_length_mm": 5.0,
+    "notes": "Open padded strap cradle, not a close-fitting negative of the photo model. Approximate underside gap is 0.5 mm at rear cap and 2 mm at flat main-case lands; shim with compliant strips as needed. Two strap stations avoid estimated motor window and front elbow. Secure manually before any motion; camera fit pending."
+  },
+  "checks": [
+    {
+      "name": "front_shell",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "rear_shell",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "camera",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "ptz_tilt",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "pump_housing",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "pump_motor_window",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "pump_nozzle",
+      "overlap_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "name": "pump_elbow_estimated",
+      "overlap_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "name": "pump_hose_stub_estimated",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "measured_pump_envelope",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "M3_clearance_-21_-7",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "driver_before_payload_-21_-7",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "M3_clearance_-21_7",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "driver_before_payload_-21_7",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "M3_clearance_21_-7",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "driver_before_payload_21_-7",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "M3_clearance_21_7",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "driver_before_payload_21_7",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "rear_screw_-8",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "rear_screw_8",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "camera_ribbon_exit",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "camera_region_unchanged",
+      "difference_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "name": "front_removal_1",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "rear_removal_1",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "front_removal_5",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "rear_removal_5",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "front_removal_15",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "rear_removal_15",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "front_removal_30",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "rear_removal_30",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "front_removal_60",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "rear_removal_60",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "front_removal_120",
+      "overlap_mm3": 0,
+      "pass_check": true
+    },
+    {
+      "name": "rear_removal_120",
+      "overlap_mm3": 0,
+      "pass_check": true
+    }
+  ],
+  "pose_checks": [
+    {
+      "pan": -25,
+      "tilt": -15,
+      "collisions": []
+    },
+    {
+      "pan": -25,
+      "tilt": 0,
+      "collisions": []
+    },
+    {
+      "pan": -25,
+      "tilt": 15,
+      "collisions": []
+    },
+    {
+      "pan": 0,
+      "tilt": -15,
+      "collisions": []
+    },
+    {
+      "pan": 0,
+      "tilt": 0,
+      "collisions": []
+    },
+    {
+      "pan": 0,
+      "tilt": 15,
+      "collisions": []
+    },
+    {
+      "pan": 25,
+      "tilt": -15,
+      "collisions": []
+    },
+    {
+      "pan": 25,
+      "tilt": 0,
+      "collisions": []
+    },
+    {
+      "pan": 25,
+      "tilt": 15,
+      "collisions": []
+    }
+  ],
+  "mesh": {
+    "watertight": true,
+    "winding_consistent": true,
+    "components": 1,
+    "extents_mm": [
+      121.0,
+      199.0,
+      45.0
+    ],
+    "on_bed": true
+  },
+  "stl_sha256": "bd79a837c0be1dda201f5ac2404f1c7c14fe64618ab8c9af7107d11dda7de312",
+  "inputs": {
+    "build_v2.py": "d2a8706ee3822d6aa8c7539af04b9dfded90dfe6ec34bf091e985542788c6c6c",
+    "build_carrier_v2_2.py": "613e0249f7a577136613b676770bb64efa8bdbdf1e3abe984168fc8230a19fb0",
+    "carrier_v2_2.json": "02babbca1f2977109ed074ad5b1247d4dcdd5c76f491c708001ba65cfaa0e5a1",
+    "hardware_parameters.json": "d81607cb131f451446482eb8a3dda8f6c526d62877a958e9fc5e42bcabb12771",
+    "head_v2.json": "5d572182de15d8d109af743fcce31b460d20741dc391f7476d583f679b867daf",
+    "interfaces_v2.json": "f09d797b77634c21ac9161023525773e7f28a82b638a3d34546a6092dae60230"
+  },
+  "limitations": [
+    "Dry-fit prototype, not completed shell/body or powered-motion release.",
+    "Camera fit pending hardware; hose elbow and contours photo-estimated.",
+    "Sampled poses do not certify flex/twist, straps, wires, hose route or loading.",
+    "Use compliant padding and straps; this is not a precision fitted cradle."
+  ],
+  "digital_checks_pass": true
+}

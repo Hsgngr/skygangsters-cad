@@ -1,0 +1,378 @@
+[
+  {
+    "name": "structural_base_ring",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Four chassis rods stay attached here when bottom plate is removed.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/structural_base_ring.brep"
+  },
+  {
+    "name": "removable_bottom_bottle_tray",
+    "module": "body",
+    "color": "#3c4449",
+    "kind": "print",
+    "notes": "Four M3 screws; support owl before removal. Disconnect pickup before lowering bottle. Not a certified watertight tray.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/removable_bottom_bottle_tray.brep"
+  },
+  {
+    "name": "body_shell_front",
+    "module": "body",
+    "color": "#d3b994",
+    "kind": "print",
+    "notes": "Body: upright on bottom rim, use brim; supports for bolt lugs only. M3 seam joints.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/body_shell_front.brep"
+  },
+  {
+    "name": "body_shell_rear",
+    "module": "body",
+    "color": "#d3b994",
+    "kind": "print",
+    "notes": "Body: upright on bottom rim, use brim; supports for bolt lugs only. M3 seam joints.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/body_shell_rear.brep"
+  },
+  {
+    "name": "frame_spacer_lower_1",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Slide over M3 threaded rod; print upright with brim.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/frame_spacer_lower_1.brep"
+  },
+  {
+    "name": "frame_spacer_lower_2",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Slide over M3 threaded rod; print upright with brim.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/frame_spacer_lower_2.brep"
+  },
+  {
+    "name": "frame_spacer_lower_3",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Slide over M3 threaded rod; print upright with brim.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/frame_spacer_lower_3.brep"
+  },
+  {
+    "name": "frame_spacer_lower_4",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Slide over M3 threaded rod; print upright with brim.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/frame_spacer_lower_4.brep"
+  },
+  {
+    "name": "frame_spacer_middle_1",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Slide over M3 threaded rod; print upright with brim.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/frame_spacer_middle_1.brep"
+  },
+  {
+    "name": "frame_spacer_middle_2",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Slide over M3 threaded rod; print upright with brim.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/frame_spacer_middle_2.brep"
+  },
+  {
+    "name": "frame_spacer_middle_3",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Slide over M3 threaded rod; print upright with brim.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/frame_spacer_middle_3.brep"
+  },
+  {
+    "name": "frame_spacer_middle_4",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Slide over M3 threaded rod; print upright with brim.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/frame_spacer_middle_4.brep"
+  },
+  {
+    "name": "frame_spacer_upper_1",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Slide over M3 threaded rod; print upright with brim.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/frame_spacer_upper_1.brep"
+  },
+  {
+    "name": "frame_spacer_upper_2",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Slide over M3 threaded rod; print upright with brim.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/frame_spacer_upper_2.brep"
+  },
+  {
+    "name": "frame_spacer_upper_3",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Slide over M3 threaded rod; print upright with brim.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/frame_spacer_upper_3.brep"
+  },
+  {
+    "name": "frame_spacer_upper_4",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Slide over M3 threaded rod; print upright with brim.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/frame_spacer_upper_4.brep"
+  },
+  {
+    "name": "controller_strap_tray_-1",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Universal strap tray: select board before detailing hole pattern; add insulating spacers.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/controller_strap_tray_-1.brep"
+  },
+  {
+    "name": "controller_strap_tray_1",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Universal strap tray: select board before detailing hole pattern; add insulating spacers.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/controller_strap_tray_1.brep"
+  },
+  {
+    "name": "pi_tray_wet_bay_roof",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "M2.5 Pi mounting pattern 58 x 49 mm; sealed plumbing routing outside roof; not leak-certified.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/pi_tray_wet_bay_roof.brep"
+  },
+  {
+    "name": "ptz_base_adapter",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Official STEP base pattern; M3 bolts + nuts. Verify foot contact and screw length on actual mechanism.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/ptz_base_adapter.brep"
+  },
+  {
+    "name": "camera_ribbon_guide",
+    "module": "body",
+    "color": "#638293",
+    "kind": "print",
+    "notes": "Two M3 bolts to deck tab; loose soft straps only, not a sharp ribbon fold. Hand-verify flex loop before powering servos.",
+    "group": "fixed",
+    "print_status": "held",
+    "file": "cad/latest/components/camera_ribbon_guide.brep"
+  },
+  {
+    "name": "head_shell_front",
+    "module": "head",
+    "color": "#d3b994",
+    "kind": "print",
+    "notes": "Head: seam face on bed; supports inside open half. M3 seam joints.",
+    "group": "tilt",
+    "print_status": "held",
+    "file": "cad/latest/components/head_shell_front.brep"
+  },
+  {
+    "name": "head_shell_rear",
+    "module": "head",
+    "color": "#d3b994",
+    "kind": "print",
+    "notes": "Head: seam face on bed; supports inside open half. M3 seam joints.",
+    "group": "tilt",
+    "print_status": "held",
+    "file": "cad/latest/components/head_shell_rear.brep"
+  },
+  {
+    "name": "head_payload_carrier",
+    "module": "head",
+    "color": "#7297aa",
+    "kind": "print",
+    "notes": "M3 to PTZ; M2 camera bolts/nuts, 5 mm rear standoff; straps retain adjustable gun envelope. Supports required.",
+    "group": "tilt",
+    "revision": "CARRIER-2.2-FIT-TEST",
+    "print_status": "unpowered_dry_fit_only_print_in_progress",
+    "file": "cad/latest/components/head_payload_carrier.brep"
+  },
+  {
+    "name": "ptz_fixed",
+    "module": "reference",
+    "color": "#28786e",
+    "kind": "purchased",
+    "notes": "",
+    "group": "fixed",
+    "print_status": "not_a_print_part",
+    "file": "cad/latest/components/ptz_fixed.brep"
+  },
+  {
+    "name": "ptz_pan",
+    "module": "reference",
+    "color": "#28786e",
+    "kind": "purchased",
+    "notes": "",
+    "group": "pan",
+    "print_status": "not_a_print_part",
+    "file": "cad/latest/components/ptz_pan.brep"
+  },
+  {
+    "name": "ptz_tilt",
+    "module": "reference",
+    "color": "#28786e",
+    "kind": "purchased",
+    "notes": "",
+    "group": "tilt",
+    "print_status": "not_a_print_part",
+    "file": "cad/latest/components/ptz_tilt.brep"
+  },
+  {
+    "name": "pi5",
+    "module": "reference",
+    "color": "#438964",
+    "kind": "purchased",
+    "notes": "",
+    "group": "fixed",
+    "print_status": "not_a_print_part",
+    "file": "cad/latest/components/pi5.brep"
+  },
+  {
+    "name": "cooling_reserve",
+    "module": "reference",
+    "color": "#8c969c",
+    "kind": "reserve",
+    "notes": "",
+    "group": "fixed",
+    "print_status": "not_a_print_part",
+    "file": "cad/latest/components/cooling_reserve.brep"
+  },
+  {
+    "name": "controller",
+    "module": "reference",
+    "color": "#666075",
+    "kind": "reserve",
+    "notes": "",
+    "group": "fixed",
+    "print_status": "not_a_print_part",
+    "file": "cad/latest/components/controller.brep"
+  },
+  {
+    "name": "pump_interface",
+    "module": "reference",
+    "color": "#666075",
+    "kind": "reserve",
+    "notes": "",
+    "group": "fixed",
+    "print_status": "not_a_print_part",
+    "file": "cad/latest/components/pump_interface.brep"
+  },
+  {
+    "name": "bottle_500ml",
+    "module": "reference",
+    "color": "#60aacc",
+    "kind": "purchased_placeholder",
+    "notes": "",
+    "group": "fixed",
+    "print_status": "not_a_print_part",
+    "file": "cad/latest/components/bottle_500ml.brep"
+  },
+  {
+    "name": "camera_module3",
+    "module": "reference",
+    "color": "#387a52",
+    "kind": "purchased_proxy",
+    "notes": "",
+    "group": "tilt",
+    "print_status": "not_a_print_part",
+    "file": "cad/latest/components/camera_module3.brep"
+  },
+  {
+    "name": "pump_housing",
+    "file": "cad/latest/components/pump_housing.brep",
+    "module": "reference",
+    "group": "tilt",
+    "kind": "purchased_proxy",
+    "color": "#ED650C",
+    "print_status": "not_a_print_part"
+  },
+  {
+    "name": "pump_motor_window",
+    "file": "cad/latest/components/pump_motor_window.brep",
+    "module": "reference",
+    "group": "tilt",
+    "kind": "purchased_proxy",
+    "color": "#787F83",
+    "print_status": "not_a_print_part"
+  },
+  {
+    "name": "pump_nozzle",
+    "file": "cad/latest/components/pump_nozzle.brep",
+    "module": "reference",
+    "group": "tilt",
+    "kind": "purchased_proxy",
+    "color": "#DC9C25",
+    "print_status": "not_a_print_part"
+  },
+  {
+    "name": "pump_elbow_estimated",
+    "file": "cad/latest/components/pump_elbow_estimated.brep",
+    "module": "reference",
+    "group": "tilt",
+    "kind": "purchased_proxy",
+    "color": "#DC9C25",
+    "print_status": "not_a_print_part"
+  },
+  {
+    "name": "pump_hose_stub_estimated",
+    "file": "cad/latest/components/pump_hose_stub_estimated.brep",
+    "module": "reference",
+    "group": "tilt",
+    "kind": "purchased_proxy",
+    "color": "#AFCACD",
+    "print_status": "not_a_print_part"
+  }
+]

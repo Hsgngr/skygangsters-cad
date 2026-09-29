@@ -1,0 +1,11 @@
+{
+  "revision": "CARRIER-2.2-FIT-TEST",
+  "pump_side_clearance_mm": 2.0,
+  "pump_bottom_padding_allowance_mm": 0.5,
+  "pump_rear_clearance_mm": 3.0,
+  "side_wall_thickness_mm": 2.0,
+  "strap_stations_world_y_mm": [-68.0, -42.0],
+  "strap_slot_width_mm": 2.5,
+  "strap_slot_length_mm": 5.0,
+  "notes": "Open padded strap cradle, not a close-fitting negative of the photo model. Approximate underside gap is 0.5 mm at rear cap and 2 mm at flat main-case lands; shim with compliant strips as needed. Two strap stations avoid estimated motor window and front elbow. Secure manually before any motion; camera fit pending."
+}

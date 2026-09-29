@@ -1,0 +1,10 @@
+old_work/
+.venv*/
+__pycache__/
+*.pyc
+.DS_Store
+cad/candidates/
+*.gcode
+*.bgcode
+*.blend*
+.env*

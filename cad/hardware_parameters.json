@@ -1,0 +1,130 @@
+{
+  "procurement": {
+    "status": "ordered_by_user_awaiting_delivery",
+    "confirmed_date": "2026-09-27",
+    "pi_kit": "db-tronic Raspberry Pi 5 8GB / 128GB starter kit B0CRPF47RG",
+    "camera": "Raspberry Pi Camera Module 3 Standard, regular colour",
+    "ai_accelerator": "deferred_not_ordered",
+    "standalone_active_cooler": "not_confirmed_ordered_final_cooling_undecided"
+  },
+  "camera_cable": {
+    "length_mm": 300.0,
+    "type": "Pi 5-compatible camera cable, 15-pin Standard to 22-pin Mini",
+    "status": "ordered",
+    "routing_requirement": "Total routed length must include slack for pan/tilt movement and service access",
+    "brand": null
+  },
+  "pan_tilt": {
+    "reference": "references/yahboom/2DOF_PTZ.STEP",
+    "model_identity": "confirmed_by_user_in_Fusion",
+    "critical_mount_measurements_verified": false,
+    "motion_limits_verified": false,
+    "servo_labels": {
+      "pan": {"brand": "Yahboom", "torque_label_kg_cm": 20, "rated_voltage_v": [6.0, 7.4], "photo": "references/servo_pan_label_20kg.jpg"},
+      "tilt": {"brand": "Yahboom", "torque_label_kg_cm": 25, "rated_voltage_v": [6.0, 7.4], "photo": "references/servo_tilt_label_25kg.jpg"},
+      "current_and_logic_level_verified": false,
+      "note": "User photos confirm voltage labels; torque operating conditions, stall current and logic compatibility remain unknown. 5 V direct supply is below the marked range."
+    }
+  },
+  "owned_dc_adapter": {
+    "model_on_photo": "YU0510",
+    "model_as_initially_typed": "YU510",
+    "input": "AC 100-240 V, 1.8 A, 50-60 Hz",
+    "output_voltage_v": 5.0,
+    "output_current_label_a": 10.0,
+    "output_power_label_w": 50.0,
+    "polarity_label": "centre-positive",
+    "dc_plug_dimensions_mm": null,
+    "dc_connector_style": "Barrel plug plus removable female barrel-to-two-screw-terminal adapter; photo IMG_1858; dimensions and current rating not established",
+    "label_use": "indoor use only",
+    "photo": "references/yu0510_adapter_label.jpg",
+    "loaded_output_verified": false,
+    "direct_servo_compatibility": false,
+    "note": "Do not connect directly to 6-7.4 V servos; 10 A capacity does not raise its 5 V output. Possible pump/control source after regulation and current/connector checks. Not a verified Pi 5 USB-PD supply."
+  },
+  "gun_assembly": {
+    "physical_switch_present": true,
+    "switch_function": "Photo suggests two-wire switch in series with positive motor supply; verify unpowered continuity before wiring",
+    "electrical_photo": "references/gun_battery_switch.png",
+    "battery": {
+      "chemistry": "Li-ion",
+      "format": "14500",
+      "nominal_voltage_v": 3.7,
+      "capacity_mah": 500,
+      "energy_wh": 1.85,
+      "source": "User transcribed battery label, 2026-09-28",
+      "protection_and_discharge_rating": "unknown",
+      "final_enclosure_status": "original bench source; regulated pump supply proposed instead; no battery bay designed"
+    },
+    "electrical_interface": "Do not connect switch contacts directly to ESP32 GPIO until circuit is identified; reserve a rated relay/MOSFET/interface",
+    "length_mm": 132.25,
+    "width_mm": 32.0,
+    "thickness_mm": 24.0,
+    "mass_g": 75.0,
+    "measurement_quality": "User exact dimensions 132.25 x 32 x 24 mm on 2026-09-28; orange housing plus nozzle only; elbow, wires, switch and battery excluded",
+    "includes_nozzle_tip_and_hose_elbow": false,
+    "includes_nozzle_tip": true,
+    "includes_hose_elbow": false,
+    "scan_reference": "references/water_pump_scan_original.stl",
+    "preferred_geometry_reference": "generated/pump_photo_review_v2/pump_photo_reference.step",
+    "photo_model_parameters": "pump_photo_parameters.json",
+    "front_section_width_mm": 18.0,
+    "front_section_width_source": "User says 18 mm; caliper photo IMG_1866 shows 18.02. IMG_1868 confirms barrel-like section; circular 18 mm model is an approximation, orthogonal thickness remains unmeasured.",
+    "mount_geometry": null,
+    "clearance_allowance_mm": null,
+    "source": "User photos 2026-09-27 and revised dimensions 2026-09-28"
+  },
+  "owl_scan": {
+    "design_role": "aesthetic reference only; custom head and body permitted",
+    "scale_mode": "uniform_match_height",
+    "measured_assembled_height_mm": 390.0,
+    "approximate_width_mm": 180.0,
+    "source": "User owl dimensions 18 x 39 cm; height-based scale provisional"
+  },
+  "reservoir": {
+    "nominal_capacity_ml": 500,
+    "water_mass_g_approx": 500,
+    "status": "no bottle selected; user requested parametric placeholder",
+    "shape": "provisional squat round bottle, not a measured commercial product",
+    "diameter_mm": 90,
+    "total_height_mm": 110,
+    "shoulder_height_mm": 9,
+    "cap_diameter_mm": 40,
+    "cap_height_mm": 15,
+    "base_center_mm": [0, 0, 16],
+    "radial_clearance_mm": 3,
+    "top_fittings_reserve_mm": 8,
+    "placement": "stationary lower body; never on pan/tilt",
+    "capacity_verified": false,
+    "notes": "Nominal capacity is independent of placeholder dimensions. Replace dimensions after bottle selection. Cap fittings, vent, dip tube, leak tray and removal path are not yet engineered."
+  },
+  "actuator_control": {
+    "controller": "reuse ESP32 with old camera disabled",
+    "servo_signals": "direct hardware PWM, subject to exact servo 3.3V signal compatibility",
+    "servo_power": "separate regulated supply within confirmed 6-7.4 V label range; current sizing pending; owned 5 V adapter is not suitable directly; not Pi/ESP32 power pins",
+    "pca9685_required": false,
+    "pump_interface": "pending switch identification and voltage/current measurement",
+    "pi_link": "USB serial proposed; existing firmware is Wi-Fi HTTP, migration not implemented"
+  },
+  "power_architecture": {
+    "user_preference": "one external AC adapter powering everything",
+    "status": "requirements captured; converters, connector ratings and peak-current budget not selected",
+    "existing_5v_adapter_option": "5 V source would need a 6 V servo boost stage, appropriate Pi USB-C power interface, and regulated pump branch; capacity not approved",
+    "alternative_option": "One higher-voltage external DC supply with separately regulated Pi, servo and pump branches; no supply purchased or current rating specified",
+    "no_mains_inside_owl": true,
+    "separate_pi_adapter": "available as interim bench-test source, not the preferred final architecture"
+  },
+  "pi_protective_cover": {
+    "requested": true,
+    "reference": "https://www.printables.com/model/642650-raspberry-pi-5-case-snap-fit",
+    "reference_cooling": "Author description says designed for official active cooler",
+    "final_choice": "not selected; adapt a ventilated cover to the owl or check provided case meshes",
+    "stl_received": false,
+    "mount_cooling_ports_and_case_clearance_verified": false,
+    "waterproof": false
+  },
+  "operating_requirements": {
+    "maximum_working_distance_m": 4.0,
+    "range_status": "User-reported pump reach; accuracy and effective deterrence range not yet tested"
+  }
+}

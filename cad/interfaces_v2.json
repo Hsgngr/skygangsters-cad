@@ -1,0 +1,21 @@
+{
+  "revision": "PTZ-INTERFACE-1",
+  "units": "mm",
+  "world_axes": "X right, Y rear, Z up; front -Y",
+  "ptz_base_z": 186,
+  "source_base_y": -32,
+  "source_tilt_axis_y": 50,
+  "source_top_y": 96.5,
+  "base_holes_xy": [[-35.532,-35.532],[-35.532,35.532],[35.532,-35.532],[35.532,35.532]],
+  "head_holes_xy": [[-21,-7],[-21,7],[21,-7],[21,7]],
+  "head_fastener": "M3 into manufacturer's tapped top plate; verify engagement with physical unit",
+  "reference_quality": "Hole axes extracted from official STEP. PETG top-pattern coupon passes by user report 2026-09-29: finger installation, no rocking, no warp. Base pattern and final screw length/engagement remain unverified.",
+  "pan_samples_deg": [-45,-22.5,0,22.5,45],
+  "tilt_samples_deg": [-15,-7.5,0,7.5,15],
+  "printer_bed_mm": [250,210,220],
+  "m3_clearance_d": 3.4,
+  "m3_nut_across_flats": 5.7,
+  "m3_nut_depth": 2.6,
+  "m3_fit_status": "Selected from PETG test 2026-09-29: middle pair 3.4 mm screw hole / 5.7 mm nut AF. Nut inserts very easily; check resistance to rotation when gently tightening. Right pair too slack, left does not fit. Supersedes provisional PLA 3.6/5.9 choice. Print artifacts unchanged; old pump-fit hold remains.",
+  "seam_gap": 0.3
+}
