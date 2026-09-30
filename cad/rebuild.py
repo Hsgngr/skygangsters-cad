@@ -1,86 +1,57 @@
-"""Rebuild unreleased candidates or verify the published carrier; no hardware I/O."""
+"""Build V4 candidates or verify them against the public prototype; no hardware I/O."""
 import argparse
 import hashlib
 import json
 from pathlib import Path
 import cadquery as cq
-import numpy as np
 import trimesh
-import build_v2 as b
-import build_pump_photo_reference as p
-from geometry_checks import intersection, pose
+import build_carrier_v4 as v4
+import build_v2 as baseline
+import pump_reference
 
-ROOT=Path(__file__).resolve().parent
-REPO=ROOT.parent
-OUT=ROOT/'candidates'
-CONFIG=json.loads((ROOT/'carrier_v2_2.json').read_text())
+ROOT = Path(__file__).resolve().parent
+REPO = ROOT.parent
 
-def saved(name):
-    return cq.Shape.importBrep(str(ROOT/'latest/components'/f'{name}.brep'))
-
-def check():
-    new=b.make_head_carrier(CONFIG).clean()
-    old=saved('head_payload_carrier')
-    assert new.isValid() and len(new.Solids())==1
-    difference=new.cut(old).Volume()+old.cut(new).Volume()
-    assert difference<.05, f'Carrier changed: {difference} mm3; candidate not released'
-    release=REPO/'print/carrier/head_payload_carrier_v2_2.stl'
-    report=json.loads((REPO/'validation/carrier_validation.json').read_text())
-    assert hashlib.sha256(release.read_bytes()).hexdigest()==report['stl_sha256']
-    mesh=trimesh.load(release,force='mesh')
-    assert mesh.is_watertight and mesh.is_winding_consistent and len(mesh.split())==1
-    assert np.allclose(mesh.extents,[121,199,45],atol=.02)
-    rows=json.loads((ROOT/'latest/manifest.json').read_text())
-    pump=[r['name'] for r in rows if r['name'].startswith('pump_') and r['name']!='pump_interface']
-    for name in ['head_shell_front','head_shell_rear','camera_module3','ptz_tilt']+pump:
-        overlap=intersection(new,saved(name))
-        assert overlap<.05,(name,overlap)
-    moving=cq.Compound.makeCompound([new]+[saved(n) for n in pump])
-    targets=[r for r in rows if r['group'] in ('fixed','pan')]
-    for pan in (-25,0,25):
-        for tilt in (-15,0,15):
-            transformed=pose(moving,pan,tilt,'tilt')
-            for row in targets:
-                overlap=intersection(transformed,pose(saved(row['name']),pan,tilt,row['group']))
-                assert overlap<.05,(pan,tilt,row['name'],overlap)
-    print('PASS: carrier geometry unchanged, released STL hash/mesh, neutral clearances, nine sampled poses')
-    print('This is not full assembly, physical fit, cable-sweep or powered-motion approval.')
 
 def carrier():
-    OUT.mkdir(exist_ok=True)
-    shape=b.make_head_carrier(CONFIG).clean()
-    assert shape.isValid() and len(shape.Solids())==1
-    local=shape.translate((0,0,-b.TOP))
-    cq.exporters.export(local,str(OUT/'carrier_candidate.step'))
-    cq.exporters.export(local,str(OUT/'carrier_candidate.stl'),tolerance=.08,angularTolerance=.12)
-    mesh=trimesh.load(OUT/'carrier_candidate.stl',force='mesh')
-    mesh.apply_translation(-mesh.bounds[0]);mesh.export(OUT/'carrier_candidate.stl')
-    assert mesh.is_watertight and mesh.is_winding_consistent
-    print('Unreleased carrier candidate: recheck, re-slice and physically fit before approval')
+    v4.main()
+
+
+def check():
+    carrier()
+    report = json.loads((REPO/'validation/carrier_validation.json').read_text())
+    assert report['all_pass']
+    for name, row in report['meshes'].items():
+        release = REPO/'print/carrier'/f'{name}_print.stl'
+        assert hashlib.sha256(release.read_bytes()).hexdigest() == row['sha256'], name
+        mesh = trimesh.load(release, force='mesh')
+        assert mesh.is_watertight and mesh.is_winding_consistent and len(mesh.split()) == 1, name
+        old = cq.Shape.importBrep(str(ROOT/'latest/carrier_v4/assembly'/f'{name}.brep'))
+        new = cq.Shape.importBrep(str(v4.OUT/'assembly'/f'{name}.brep'))
+        assert old.isValid() and new.isValid()
+        difference = old.cut(new).Volume() + new.cut(old).Volume()
+        assert difference < .05, (name, difference)
+    print('PASS: six published meshes and regenerated V4 solids; digital checks only, physical fit pending.')
+
 
 def pump():
-    OUT.mkdir(exist_ok=True)
-    asm=cq.Assembly(name='PUMP_REFERENCE_CANDIDATE_NOT_PRINT_PART')
-    for name,shape,color in p.build_parts():
-        assert shape.isValid()
-        asm.add(shape,name=name,color=cq.Color(color))
-    asm.save(str(OUT/'pump_candidate.step'))
-    print('Estimated purchased-part proxy only; not a printable motor/pump')
+    pump_reference.main()
+
 
 def shells():
-    OUT.mkdir(exist_ok=True)
-    b.OUT=OUT/'shells';b.OUT.mkdir(exist_ok=True)
-    b.PARTS.clear()
-    original=b.make_head_carrier
-    b.make_head_carrier=lambda config=None:original(CONFIG if config is None else config)
-    b.body();b.head()
-    asm=cq.Assembly(name='SHELL_CANDIDATES_NOT_RELEASED')
-    for row in b.PARTS:asm.add(row['shape'],name=row['name'],color=cq.Color(row['color']))
-    asm.save(str(OUT/'shell_candidates.step'))
-    print('Unreleased shell candidates; purchased references are NOT rebuilt or refitted')
+    baseline.OUT = ROOT/'candidates/shells'
+    baseline.OUT.mkdir(parents=True, exist_ok=True)
+    baseline.PARTS.clear()
+    baseline.body()
+    baseline.head()
+    assembly = cq.Assembly(name='BASELINE_SHELLS_HELD_NOT_V4_FITTED')
+    for row in baseline.PARTS:
+        assembly.add(row['shape'], name=row['name'], color=cq.Color(row['color']))
+    assembly.save(str(baseline.OUT/'shell_candidates.step'))
+    print('Held baseline shells: redesign around V4, camera and full motion envelope before printing.')
 
-if __name__=='__main__':
-    parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action',choices=['check','carrier','pump','shells'])
-    args=parser.parse_args()
-    globals()[args.action]()
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('action', choices=['check', 'carrier', 'pump', 'shells'])
+    globals()[parser.parse_args().action]()

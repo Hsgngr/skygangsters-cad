@@ -1,263 +1,651 @@
 {
-  "revision": "CARRIER-2.2-FIT-TEST",
-  "config": {
-    "revision": "CARRIER-2.2-FIT-TEST",
-    "pump_side_clearance_mm": 2.0,
-    "pump_bottom_padding_allowance_mm": 0.5,
-    "pump_rear_clearance_mm": 3.0,
-    "side_wall_thickness_mm": 2.0,
-    "strap_stations_world_y_mm": [
-      -68.0,
-      -42.0
+  "revision": "CARRIER-4-USER-STEP-FIT-PROTOTYPE",
+  "source": {
+    "revision": "USER-FUSION-PUMP-2026-09-30",
+    "authoritative_source": "references/water_pump/water_pump.step",
+    "source_step_sha256": "37432fbaa0676a1e6b6367cbd85c3aef4a2eecf5a73273c1b3536c4f9c8edf3f",
+    "units": "mm",
+    "native_axes": "X width, Y thickness, Z length; retain native placement until mount alignment is reviewed",
+    "scale": 1,
+    "fillets_chamfers": "Not added by user; do not invent contact geometry from missing details",
+    "status": "Authoritative user-modeled STEP for V4; physical fit pending",
+    "supersedes": [
+      "photo-derived pump proxy",
+      "scan-derived pump proxy"
     ],
-    "strap_slot_width_mm": 2.5,
-    "strap_slot_length_mm": 5.0,
-    "notes": "Open padded strap cradle, not a close-fitting negative of the photo model. Approximate underside gap is 0.5 mm at rear cap and 2 mm at flat main-case lands; shim with compliant strips as needed. Two strap stations avoid estimated motor window and front elbow. Secure manually before any motion; camera fit pending."
+    "existing_generated_assemblies": "Current V4 carrier only; retained head/body baseline is held"
+  },
+  "parameters": {
+    "revision": "CARRIER-4-USER-STEP-FIT-PROTOTYPE",
+    "units": "mm",
+    "gun_x": 32.0,
+    "gun_length_midpoint_y": 0.0,
+    "native_y_lift": 12.4,
+    "profile_clearance": 0.4,
+    "saddle_native_z": {
+      "rear": 7.5,
+      "front": 81.0
+    },
+    "saddle_depth": 10.0,
+    "bridge_depth": 8.0,
+    "adapter_thickness": 6.0,
+    "deck_floor_thickness": 4.0,
+    "deck_y_limits": [
+      -24.0,
+      70.05
+    ],
+    "saddle_top_z": 20.4,
+    "bridge_lower_relief_top_z": 27.0,
+    "bridge_roof_thickness": 4.0,
+    "retainer_bolt_x_offsets": [
+      -30.0,
+      30.0
+    ],
+    "deck_bolt_x_offsets": [
+      -24.0,
+      24.0
+    ],
+    "deck_bolt_y": [
+      -23.0,
+      14.0
+    ],
+    "end_stop_clearance": 0.5,
+    "native_front_shoulder_z": 86.1,
+    "notes": [
+      "Uses user STEP at scale 1:1; native +Z points toward nozzle, +Y is boss face.",
+      "Map native (x,y,z) to (gun_x+x, half_length-z, native_y_lift+y). Length midpoint, not measured mass centre.",
+      "Profiles are extracted from STEP and offset by 0.4 mm. Missing physical fillets are not invented.",
+      "Open lower saddles end below seam tabs. Upper bridge relief clears those tabs before fitting the upper faces.",
+      "Two outboard rear stops leave the middle rear wire path open. Front shoulder stops avoid the barrel.",
+      "Camera and shell mounts are not designed by this gun-carrier revision. No powered-operation approval."
+    ]
+  },
+  "meshes": {
+    "ptz_adapter": {
+      "extents_mm": [
+        102.0,
+        53.0,
+        6.0
+      ],
+      "sha256": "86c79aa30cd4d312a78b05a74aff37e7529ca2bc1b4ed5ff7bb4cf2e8fb26948",
+      "watertight": true
+    },
+    "gun_deck": {
+      "extents_mm": [
+        72.0,
+        99.05000305175781,
+        14.399999618530273
+      ],
+      "sha256": "fab16ba7b6ec91b508b99040839d130d2ed550ec779c2f335619afdc3709058f",
+      "watertight": true
+    },
+    "rear_bridge": {
+      "extents_mm": [
+        72.0,
+        31.049999237060547,
+        8.0
+      ],
+      "sha256": "9a5b3010c10b559bd16bbfaa9ecd20a5984367a9b2cadcd103060c7ddb53f7aa",
+      "watertight": true
+    },
+    "rear_fit_saddle": {
+      "extents_mm": [
+        72.0,
+        14.000003814697266,
+        14.399999618530273
+      ],
+      "sha256": "7022463a43a86b22c80cccbe90b9fa07c82e4eb11d2018e57116a994392ac7ba",
+      "watertight": true
+    },
+    "front_bridge": {
+      "extents_mm": [
+        72.0,
+        28.200000762939453,
+        8.000000953674316
+      ],
+      "sha256": "264a7f1c12ff1c0b51f8fa5637405d4764892f0a8bea51ab3b0e14bc16a1f13d",
+      "watertight": true
+    },
+    "front_fit_saddle": {
+      "extents_mm": [
+        72.0,
+        14.000000953674316,
+        14.399999618530273
+      ],
+      "sha256": "c58aa41233abc28718848875932465719ef794190158761ebbfeeba86f8bfe52",
+      "watertight": true
+    }
   },
   "checks": [
     {
-      "name": "front_shell",
+      "name": "ptz_adapter_vs_gun_deck",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "rear_shell",
-      "overlap_mm3": 0,
-      "pass_check": true
-    },
-    {
-      "name": "camera",
-      "overlap_mm3": 0,
-      "pass_check": true
-    },
-    {
-      "name": "ptz_tilt",
-      "overlap_mm3": 0,
-      "pass_check": true
-    },
-    {
-      "name": "pump_housing",
-      "overlap_mm3": 0,
-      "pass_check": true
-    },
-    {
-      "name": "pump_motor_window",
-      "overlap_mm3": 0,
-      "pass_check": true
-    },
-    {
-      "name": "pump_nozzle",
+      "name": "ptz_adapter_vs_rear_bridge",
       "overlap_mm3": 0.0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "pump_elbow_estimated",
+      "name": "ptz_adapter_vs_front_bridge",
       "overlap_mm3": 0.0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "pump_hose_stub_estimated",
+      "name": "gun_deck_vs_rear_bridge",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "measured_pump_envelope",
+      "name": "gun_deck_vs_front_bridge",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "M3_clearance_-21_-7",
+      "name": "rear_bridge_vs_front_bridge",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "ptz_adapter_vs_user_step",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "ptz_adapter_gun_lift_1",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "ptz_adapter_gun_lift_4",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "ptz_adapter_gun_lift_10",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "ptz_adapter_gun_lift_25",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "gun_deck_vs_user_step",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "driver_before_payload_-21_-7",
+      "name": "gun_deck_gun_lift_1",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "M3_clearance_-21_7",
+      "name": "gun_deck_gun_lift_4",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "driver_before_payload_-21_7",
+      "name": "gun_deck_gun_lift_10",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "gun_deck_gun_lift_25",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "rear_bridge_vs_user_step",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "M3_clearance_21_-7",
+      "name": "rear_bridge_bridge_lift_1",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "driver_before_payload_21_-7",
+      "name": "rear_bridge_bridge_lift_4",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "M3_clearance_21_7",
+      "name": "rear_bridge_bridge_lift_10",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "driver_before_payload_21_7",
+      "name": "rear_bridge_bridge_lift_25",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "rear_screw_-8",
+      "name": "rear_fit_saddle_vs_user_step",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "rear_screw_8",
+      "name": "rear_fit_saddle_gun_lift_1",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "camera_ribbon_exit",
+      "name": "rear_fit_saddle_gun_lift_4",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "camera_region_unchanged",
-      "difference_mm3": 0.0,
-      "pass_check": true
+      "name": "rear_fit_saddle_gun_lift_10",
+      "overlap_mm3": 0.0,
+      "passed": true
     },
     {
-      "name": "front_removal_1",
+      "name": "rear_fit_saddle_gun_lift_25",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "front_bridge_vs_user_step",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "rear_removal_1",
+      "name": "front_bridge_bridge_lift_1",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "front_removal_5",
+      "name": "front_bridge_bridge_lift_4",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "rear_removal_5",
+      "name": "front_bridge_bridge_lift_10",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "front_removal_15",
+      "name": "front_bridge_bridge_lift_25",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "rear_removal_15",
+      "name": "front_fit_saddle_vs_user_step",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "front_removal_30",
+      "name": "front_fit_saddle_gun_lift_1",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "rear_removal_30",
+      "name": "front_fit_saddle_gun_lift_4",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
     },
     {
-      "name": "front_removal_60",
-      "overlap_mm3": 0,
-      "pass_check": true
+      "name": "front_fit_saddle_gun_lift_10",
+      "overlap_mm3": 0.0,
+      "passed": true
     },
     {
-      "name": "rear_removal_60",
-      "overlap_mm3": 0,
-      "pass_check": true
+      "name": "front_fit_saddle_gun_lift_25",
+      "overlap_mm3": 0.0,
+      "passed": true
     },
     {
-      "name": "front_removal_120",
-      "overlap_mm3": 0,
-      "pass_check": true
+      "name": "end_stop_arrests_y_-1.0",
+      "overlap_mm3": 12.014353,
+      "passed": true,
+      "expected": "intentional overlap after 1 mm axial displacement"
     },
     {
-      "name": "rear_removal_120",
+      "name": "end_stop_arrests_y_1.0",
+      "overlap_mm3": 10.556701,
+      "passed": true,
+      "expected": "intentional overlap after 1 mm axial displacement"
+    },
+    {
+      "name": "ptz_adapter_vs_ptz_fixed",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "gun_deck_vs_ptz_fixed",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "rear_bridge_vs_ptz_fixed",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "front_bridge_vs_ptz_fixed",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "ptz_adapter_vs_ptz_pan",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "gun_deck_vs_ptz_pan",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "rear_bridge_vs_ptz_pan",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "front_bridge_vs_ptz_pan",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "ptz_adapter_vs_ptz_tilt",
       "overlap_mm3": 0,
-      "pass_check": true
+      "passed": true
+    },
+    {
+      "name": "gun_deck_vs_ptz_tilt",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "rear_bridge_vs_ptz_tilt",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "front_bridge_vs_ptz_tilt",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_-24.0_-23.0_ptz_adapter",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_-24.0_-23.0_gun_deck",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_-24.0_-23.0_rear_bridge",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_-24.0_-23.0_front_bridge",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_-24.0_14.0_ptz_adapter",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_-24.0_14.0_gun_deck",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_-24.0_14.0_rear_bridge",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_-24.0_14.0_front_bridge",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_24.0_-23.0_ptz_adapter",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_24.0_-23.0_gun_deck",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_24.0_-23.0_rear_bridge",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_24.0_-23.0_front_bridge",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_24.0_14.0_ptz_adapter",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_24.0_14.0_gun_deck",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_24.0_14.0_rear_bridge",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "deck_driver_24.0_14.0_front_bridge",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_rear_-30.0_ptz_adapter",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_rear_-30.0_gun_deck",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_rear_-30.0_rear_bridge",
+      "overlap_mm3": 0.000741,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_rear_-30.0_front_bridge",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_rear_30.0_ptz_adapter",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_rear_30.0_gun_deck",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_rear_30.0_rear_bridge",
+      "overlap_mm3": 0.000741,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_rear_30.0_front_bridge",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_front_-30.0_ptz_adapter",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_front_-30.0_gun_deck",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_front_-30.0_rear_bridge",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_front_-30.0_front_bridge",
+      "overlap_mm3": 0.000741,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_front_30.0_ptz_adapter",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_front_30.0_gun_deck",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_front_30.0_rear_bridge",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "bridge_driver_front_30.0_front_bridge",
+      "overlap_mm3": 0.000741,
+      "passed": true
+    },
+    {
+      "name": "ptz_adapter_rear_wire_window",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "gun_deck_rear_wire_window",
+      "overlap_mm3": 0,
+      "passed": true
+    },
+    {
+      "name": "rear_bridge_rear_wire_window",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "front_bridge_rear_wire_window",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_-25_-15_fixed",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_-25_-15_pan",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_-25_0_fixed",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_-25_0_pan",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_-25_15_fixed",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_-25_15_pan",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_0_-15_fixed",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_0_-15_pan",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_0_0_fixed",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_0_0_pan",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_0_15_fixed",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_0_15_pan",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_25_-15_fixed",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_25_-15_pan",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_25_0_fixed",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_25_0_pan",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_25_15_fixed",
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pose_25_15_pan",
+      "overlap_mm3": 0.0,
+      "passed": true
     }
   ],
-  "pose_checks": [
-    {
-      "pan": -25,
-      "tilt": -15,
-      "collisions": []
-    },
-    {
-      "pan": -25,
-      "tilt": 0,
-      "collisions": []
-    },
-    {
-      "pan": -25,
-      "tilt": 15,
-      "collisions": []
-    },
-    {
-      "pan": 0,
-      "tilt": -15,
-      "collisions": []
-    },
-    {
-      "pan": 0,
-      "tilt": 0,
-      "collisions": []
-    },
-    {
-      "pan": 0,
-      "tilt": 15,
-      "collisions": []
-    },
-    {
-      "pan": 25,
-      "tilt": -15,
-      "collisions": []
-    },
-    {
-      "pan": 25,
-      "tilt": 0,
-      "collisions": []
-    },
-    {
-      "pan": 25,
-      "tilt": 15,
-      "collisions": []
-    }
-  ],
-  "mesh": {
-    "watertight": true,
-    "winding_consistent": true,
-    "components": 1,
-    "extents_mm": [
-      121.0,
-      199.0,
-      45.0
-    ],
-    "on_bed": true
-  },
-  "stl_sha256": "bd79a837c0be1dda201f5ac2404f1c7c14fe64618ab8c9af7107d11dda7de312",
-  "inputs": {
-    "build_v2.py": "d2a8706ee3822d6aa8c7539af04b9dfded90dfe6ec34bf091e985542788c6c6c",
-    "build_carrier_v2_2.py": "613e0249f7a577136613b676770bb64efa8bdbdf1e3abe984168fc8230a19fb0",
-    "carrier_v2_2.json": "02babbca1f2977109ed074ad5b1247d4dcdd5c76f491c708001ba65cfaa0e5a1",
-    "hardware_parameters.json": "d81607cb131f451446482eb8a3dda8f6c526d62877a958e9fc5e42bcabb12771",
-    "head_v2.json": "5d572182de15d8d109af743fcce31b460d20741dc391f7476d583f679b867daf",
-    "interfaces_v2.json": "f09d797b77634c21ac9161023525773e7f28a82b638a3d34546a6092dae60230"
-  },
+  "all_pass": true,
+  "source_transform": "rotate X +90 degrees, then translate (32,66.05,12.4) mm; no scaling",
   "limitations": [
-    "Dry-fit prototype, not completed shell/body or powered-motion release.",
-    "Camera fit pending hardware; hose elbow and contours photo-estimated.",
-    "Sampled poses do not certify flex/twist, straps, wires, hose route or loading.",
-    "Use compliant padding and straps; this is not a precision fitted cradle."
-  ],
-  "digital_checks_pass": true
+    "Source lacks fillets/chamfers; real contact and pad preload need fit tests.",
+    "Source fittings do not establish complete real hose/wire envelopes.",
+    "No camera/head shell redesign or full body/cable sweep in this release.",
+    "No structural or powered validation; trial fit parts first."
+  ]
 }

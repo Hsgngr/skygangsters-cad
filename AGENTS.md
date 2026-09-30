@@ -1,12 +1,15 @@
 # CAD handoff instructions
 
-Read README.md, BOM.md and Devlog.md first. This is a CAD-only public snapshot, not the original robotics/vision repository.
+Read README.md, BOM.md and Devlog.md first. This is a CAD-only public repository.
 
-- Keep secrets, private notes/photos, network configuration, datasets/weights and company material out of this public repo.
-- V2.2 failed during PETG support removal and is withdrawn. The original workspace now has a compact V3 gun cradle/adapter and retaining bridges; those sources/artifacts are NOT yet packaged here. See README toolchain/transfer notes before continuing on another laptop. No cable ties are available.
-- Await physical fit of the local V3 saddle coupon plus one bridge. Do not reprint V2.2; camera coupon and head/body shells remain held. Do not equate digital checks with physical print, strength, cable-sweep or powered-operation approval.
-- Keep head/body modular about the shared PTZ datums. Keep dimensions parametric. Avoid gratuitous cosmetic changes until fit is established.
-- Use cad/rebuild.py; candidates go to ignored cad/candidates/. Never overwrite a released STL without explicit intent, tests and updated status.
-- Validate CAD solids, mesh manifoldness, clearances, print orientation, support removal, real hardware fit and safe screw engagement. Re-slice changed parts. Update BOM/devlog and manifest/hashes with releases.
-- Do not energize hardware, flash firmware, modify the Pi or assume physical access from this repo. Source firmware is not included; wiring notes are proposals with unresolved electrical gates.
-- Older work is deliberately absent. Do not fetch/copy old private project history to fill gaps. Ask for missing physical measurements.
+- Keep private paths, credentials, network configuration, photos, datasets and company material out.
+- Current carrier is V4, derived from the pinned user STEP. V2.2 failed physically; V3 profiles did not fit. Do not recreate superseded carriers.
+- User approved gun right offset 32 mm with length midpoint centred front-to-back; left side is reserved for camera. Do not silently centre it laterally or claim centre-of-mass balance.
+- Await physical V4 rear/front fit-test results. No cable ties are assumed available. Bridges are bolted.
+- Camera mount and shell attachments are not part of V4. Baseline head/body shells remain held and need integration/redesign.
+- Use cad/rebuild.py; candidates go to ignored cad/candidates/. Do not overwrite released artifacts implicitly.
+- Recheck CAD, mesh, support-free orientation, fastener/tool access and physical fit after changes. Keep digital evidence distinct from strength/cable-sweep/powered approval.
+- Update BOM, devlog, print guide, validation and inventory when intentionally publishing changes. Stage reviewed files before refreshing inventory.
+- Preserve shared PTZ datums and modular head/body access.
+- Do not operate hardware, flash firmware or modify the Pi. Electrical design is unresolved.
+- Keep older work outside the public current tree. Do not import private history to fill missing information.

@@ -1,0 +1,30 @@
+{
+  "revision": "CARRIER-4-USER-STEP-FIT-PROTOTYPE",
+  "units": "mm",
+  "gun_x": 32.0,
+  "gun_length_midpoint_y": 0.0,
+  "native_y_lift": 12.4,
+  "profile_clearance": 0.4,
+  "saddle_native_z": {"rear": 7.5, "front": 81.0},
+  "saddle_depth": 10.0,
+  "bridge_depth": 8.0,
+  "adapter_thickness": 6.0,
+  "deck_floor_thickness": 4.0,
+  "deck_y_limits": [-24.0, 70.05],
+  "saddle_top_z": 20.4,
+  "bridge_lower_relief_top_z": 27.0,
+  "bridge_roof_thickness": 4.0,
+  "retainer_bolt_x_offsets": [-30.0, 30.0],
+  "deck_bolt_x_offsets": [-24.0, 24.0],
+  "deck_bolt_y": [-23.0, 14.0],
+  "end_stop_clearance": 0.5,
+  "native_front_shoulder_z": 86.1,
+  "notes": [
+    "Uses user STEP at scale 1:1; native +Z points toward nozzle, +Y is boss face.",
+    "Map native (x,y,z) to (gun_x+x, half_length-z, native_y_lift+y). Length midpoint, not measured mass centre.",
+    "Profiles are extracted from STEP and offset by 0.4 mm. Missing physical fillets are not invented.",
+    "Open lower saddles end below seam tabs. Upper bridge relief clears those tabs before fitting the upper faces.",
+    "Two outboard rear stops leave the middle rear wire path open. Front shoulder stops avoid the barrel.",
+    "Camera and shell mounts are not designed by this gun-carrier revision. No powered-operation approval."
+  ]
+}

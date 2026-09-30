@@ -1,0 +1,15 @@
+{
+  "revision": "USER-FUSION-PUMP-2026-09-30",
+  "authoritative_source": "references/water_pump/water_pump.step",
+  "source_step_sha256": "37432fbaa0676a1e6b6367cbd85c3aef4a2eecf5a73273c1b3536c4f9c8edf3f",
+  "units": "mm",
+  "native_axes": "X width, Y thickness, Z length; retain native placement until mount alignment is reviewed",
+  "scale": 1,
+  "fillets_chamfers": "Not added by user; do not invent contact geometry from missing details",
+  "status": "Authoritative user-modeled STEP for V4; physical fit pending",
+  "supersedes": [
+    "photo-derived pump proxy",
+    "scan-derived pump proxy"
+  ],
+  "existing_generated_assemblies": "Current V4 carrier only; retained head/body baseline is held"
+}

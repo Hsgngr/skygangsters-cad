@@ -2,6 +2,18 @@
 
 Curated project-only record. Older geometry versions, original private devlog, photos and credentials are deliberately not published.
 
+## 2026-09-30 — V4 public prototype handoff
+
+- V3 saddle tests revealed curvature/contact gaps. The user supplied an authoritative Fusion STEP instead of continuing photo-based profile guesses. V4 extracts two real cross-sections at 7.5 mm and 81 mm from the rear casing face, with 0.4 mm initial clearance. The source STEP is included unchanged; native Fusion archives and private photos are not published.
+- Replaced fragile posts and long arm with a continuous low deck, flat PTZ adapter and two separately printed bolted bridges. Open rear wire route, external hose clearance to verify, axial stops and accessible fasteners. No arbitrary V profile.
+- User confirmed centring only front-to-back: gun length midpoint Y=0, gun X=+32 mm on the right, camera space on the left. This is not centre-of-mass balancing. Camera bracket and shell attachment remain future work.
+- Public-only rebuild passed all 104 geometry checks and reproduced the six STL hashes exactly. Checks include sections, insertion/removal, driver access, straight wire probe, stops and nine PTZ poses. They do not include old shell compatibility or actual cable/hose sweep, strength or powered operation.
+- Six diagnostic support-free PETG slices pass. First rear fit pair ~38m40/11.84 g, then front pair ~37m53/11.63 g. Physical V4 tests are pending; user plans to print. Do not record a fit pass until reported.
+- Published V4 source, parameter files, print/assembly folders, real CAD previews, validation and portable build/slicer instructions. Retained head/body baseline is held. Superseded public-tree carrier/photo-proxy artifacts were archived locally outside the public checkout; Git history is not rewritten.
+- Updated BOM and handoff tool/function map. No hardware, Pi, firmware or network configuration changed.
+
+The dated entries below are historical evidence, not current print instructions. Files described as bundled in older entries have since been replaced by V4.
+
 ## 2026-09-30 — physical failure and software handoff documentation
 
 - PETG V2.2 carrier broke at both pump-bed posts and the long rear shell-arm root during support removal. Withdraw its print recommendation. User also reports excessive length/bed width and blocked rear motor wires.

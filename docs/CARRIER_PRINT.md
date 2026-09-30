@@ -1,45 +1,72 @@
-# Carrier V2.2 — PETG dry-fit print
+# Carrier V4 — derived from the user's pump STEP
 
-> **Withdrawn 2026-09-30:** this print broke at both pump-bed posts and the rear arm during support removal. Do not follow the historical print recommendation below. See the README for current V3 small-fit-test status and software handoff; V3 files are not yet bundled here.
-
-2026-09-29. **Print this carrier only; head shells and body are not released.** This replaces the older carrier for the next physical fit test, not the whole V2.1 assembly.
-
-**Latest physical status:** this carrier is printing. The user has no straps/cable ties and prefers a printed retaining bridge/lid. Wait for completion and inspect gun seating before designing it; no retainer exists yet. Strap instructions below describe the original retention option, not a requirement to purchase ties or a claim that the gun is already secured.
-
-## Files
-
-- **Print:** `../print/carrier/head_payload_carrier_v2_2.stl` — millimetres, already oriented and on the bed.
-- Fusion part: `../cad/latest/carrier_local.step` — local Z=0 at the PTZ top mounting face.
-- Fit reference: `../cad/latest/head_current_review.step` — current head shells, carrier, camera and photo-derived pump; purchased references are NOT print parts.
-- Preview: `../previews/11_carrier_only.png`; installed view: `../previews/05_head_payload_access.png`.
-- Original carrier validation and diagnostic slice evidence: `../validation/`. Source hashes refer to the original local release, before packaging; see README.
-
-Do not print the `*_world.stl`: it is a render/assembly-coordinate reference, not the bed-oriented deliverable. Do not use the previous carrier from the old ZIP.
+2026-09-30. **Unpowered fit prototype; physical V4 results pending. Camera and shell mounting are not included or released.** Replaces guessed contact contours in V3/V3.1. Old artifacts are archived locally, not supplied in the public current tree.
 
 ## What changed
 
-- Uses measured pump envelope **132.25 × 32 × 24 mm**, retaining the approved 15 mm forward projection.
-- Open cradle has **36 mm between side walls** (2 mm allowance each side) and a revised rear stop 3 mm behind the measured pump rear. It is not a fitted negative of the estimated rounded model.
-- Nominal 0.5 mm allowance under the rear cap, roughly 2 mm under the photo-estimated flat main-case lands. Use suitable thin compliant padding/shims; exact contact and nozzle height need physical confirmation.
-- Four 2.5 × 5 mm slots serve two retaining straps, at world Y=-68 and -42 mm, clear of the photo-estimated motor window and front elbow. Check actual latches, holes and moving parts before tightening straps.
-- PETG-tested **3.4 mm M3 clearance holes**. The shared 5.7 mm nut-pocket choice remains recorded; the carrier itself does not introduce new captive nut pockets.
-- PTZ top hole centres and camera mount are unchanged. Extra side clearance also avoids a zero-thickness tangency between a cradle wall and the screwdriver-access cut.
+- Uses `pump_reference.py` / `references/water_pump/water_pump.step` at scale 1:1, not the photo or scan proxy. Original Fusion/STEP files remain unchanged.
+- Extracts actual closed cross-sections from the main STEP solid at **7.5 mm and 81 mm from the rear face**, then offsets the profile outward **0.4 mm** for initial fit clearance. No guessed V or circular/elliptical cross-section. Missing physical fillets/chamfers are still missing; these remain fit prototypes.
+- Two short lower saddles have the model's flat bottom and sloped sides. They terminate below the projecting seam tabs. The two different upper bridges follow the corresponding upper profiles, with extra lower clearance for seam tabs.
+- Continuous low deck replaces slender posts. The bridges are separate parts printed on their sides. No long rear shell arm, and no unnecessary centre hole in the PTZ adapter.
+- Front shoulder stops and two outboard rear stops limit axial sliding. Rear centre remains open (20 mm between stops); a 16 × 16 mm straight wire-clearance probe passes. Actual motor wire exit, hose, strain relief and moving loops still require physical checks.
+- Retains the tested **42 × 14 mm four-hole PTZ pattern**, 3.4 mm M3 holes, 5.7 mm nut flats and 2.6 mm nut pocket depth. Adapter-to-deck front bolt row moved by 1 mm for driver access; do **not** mix the old V3 adapter with the new deck.
 
-## Slice / print
+Gun placement maps native `(x,y,z)` to `(32+x, 66.05-z, 12.4+y)` mm relative to the PTZ top face. This centres its geometric length front-to-back over the mounting pattern, not its measured centre of mass. The nozzle points toward negative assembly Y. Source shape includes the user's modeled fittings but not the complete real hose/wire route.
 
-Use PETG and the same actual printer/nozzle calibration as the successful PETG coupon. Existing diagnostic profile: **Original Prusa MK4S HF0.4 nozzle / 0.20 mm STRUCTURAL / Generic PETG**.
+## Files and print order
 
-- Keep imported orientation; footprint **121 × 199 mm**, height **45 mm**.
-- Four perimeters, 20% infill, 2 mm brim.
-- Supports enabled, automatic placement, **Snug** style (not organic/tree for this checked baseline). Inspect support under raised platforms, camera bracket and strap-slot bridges, and ensure removal access.
-- Estimated **2 h 55 min / 67.49 g PETG**, including supports/brim; your profile/material may differ. No printer-ready G-code is provided or sent to the printer.
+Published paths are relative to the repository root:
 
-Slicer completed without reported errors or repairs. The mesh is a single watertight, consistently wound component. Thirty-four CAD checks and nine sampled pan/tilt poses pass, including camera-region regression, measured pump envelope, photo-model elbow/stub, neutral purchased PTZ clearance, tool/ribbon access and sampled shell-removal paths. These are digital checks, not strength, flex-loop or waterproofing certification. ±25° pan / ±15° tilt samples do not authorize powered travel.
+- `cad/latest/carrier_v4/assembly/carrier_v4_review.step`: complete review with user pump and purchased PTZ.
+- `cad/latest/carrier_v4/assembly/`: component STEP/BREP and assembly/reference STLs. **Not the slicer folder.**
+- `print/carrier/`: print-oriented STL files only.
+- `previews/`: three actual CAD renders of installed, open-rear and exploded views.
+- `validation/carrier_validation.json`, `validation/carrier_slicer_validation.json`: digital evidence, not proof of strength.
 
-## After printing
+Rebuilds write to ignored `cad/candidates/carrier_v4/`, never over these published files.
 
-1. Remove supports/brim carefully; clear screw holes and strap slots without enlarging them unnecessarily. Check flat seating and layer integrity.
-2. With **servos and pump disconnected**, mount the bare carrier using correctly sized M3 screws. The mounting crossbar is 4 mm thick; choose engagement based on the actual bracket, not the long test screws. Verify no bottoming or underside interference. Stop if tightening is needed to flatten the part.
-3. Dry-fit the real pump. Use light straps and compliant padding so it cannot roll or slide; do not squeeze the casing, tube, latches or moving parts. Check nozzle projection, elbow access, hose bend and rear wire exit. Expect to adjust padding because the detailed contour is photo-estimated.
-4. Camera coupon remains first when the camera arrives. If it fits, install the camera gently and check access to the ribbon latch and the full cable width; do not clamp the PCB on components or force holes to align.
-5. Send top/side photos with the pump mounted, plus any screw, strap or hose interference. A dry-fit pass precedes either shell print. No water or powered-motion testing is required for this stage.
+**First: rear fit saddle + rear bridge**, about **38m40 / 11.84 g** from separate diagnostic slices. Place the saddle centre 7.5 mm forward from the gun's rear casing face; 10 mm-wide contact region spans 2.5–12.5 mm from that face. The screw ears are 14 mm long. This tests the actual rear support profile without reprinting the whole deck.
+
+Then test **front fit saddle + front bridge**, about **37m53 / 11.63 g**. Front centre is 81 mm from the rear face (51.1 mm behind the STEP's nozzle tip); lower contact spans 76–86 mm. Match the front/rear pairs; they are not interchangeable. These bridges are **new profiles**, not the old V3 bridges.
+
+Once both fits pass, print **PTZ adapter + gun deck**. Reuse the two tested V4 bridges; the standalone fit saddles are coupons, not extra assembly parts. Full functional assembly is four printed parts: adapter, deck, front bridge, rear bridge. Do not attach standalone coupons on top of the deck's integral saddles.
+
+| Print file | Envelope, mm | Diagnostic estimate |
+|---|---|---|
+| `ptz_adapter_print.stl` | 102 × 53 × 6 | 58m18 / 24.18 g |
+| `gun_deck_print.stl` | 72 × 99.05 × 14.4 | 1h09m51 / 23.73 g |
+| `rear_bridge_print.stl` | 72 × 31.05 × 8 | 18m48 / 6.21 g |
+| `rear_fit_saddle_print.stl` | 72 × 14 × 14.4 | 19m52 / 5.63 g |
+| `front_bridge_print.stl` | 72 × 28.2 × 8 | 17m53 / 5.66 g |
+| `front_fit_saddle_print.stl` | 72 × 14 × 14.4 | 20m00 / 5.97 g |
+
+PETG, supplied orientation, MK4S HF0.4, 0.20 mm STRUCTURAL, **5 perimeters, 25% infill, 2 mm brim, supports OFF**. Every diagnostic slice has no support-material toolpaths. Nut-pocket roofs and sideways screw holes still involve short bridges; inspect layer preview and actual print. Do not rotate the upper bridges upright. Combined plate times may differ.
+
+## Dry-fit and fasteners
+
+Disconnect battery/power. Support the gun on the table. Lower it into each saddle without forcing it; install the corresponding bridge. The profile clearance should not be closed by bending the bridge/casing with the screws. Check contact, rocking, side clips, motor windows, hose and wires. Small gaps at unmodeled rounded corners may remain; do not demand sharp-edge/full-surface contact. Thin compliant nonconductive pads may be needed, but choose thickness only after measuring actual gaps; do not force a thick pad into the 0.4 mm nominal clearance.
+
+- Each bridge: two M3 nuts and nominal **M3×8** screws, no extra washer thickness assumed (4 mm foot + 4 mm ear). Check actual engagement/projection.
+- Deck to adapter: four M3 nuts and nominal **M3×10** screws (4 mm flange + 6 mm plate). Nuts seat under the adapter; check underside clearance.
+- Adapter to PTZ: four M3 screws into the metal pattern, length **not yet specified**. Counterbore leaves 2.8 mm of plastic below the screw head. Check actual head dimensions, thread engagement and underside clearance; do not reuse long coupon bolts blindly.
+- Install the PTZ adapter before the deck, since the deck covers part of the PTZ screw-access area. Deck and bridge screw-driver paths are checked with components assembled.
+
+Full unpowered assembly checks: both bridges' feet seat, no rocking, gun does not roll, end stops limit fore/aft motion without pushing the wire exit, and removal is possible with bridges removed. CAD predicts end-stop contact after a 1 mm axial shift; this is a geometry test, not a tested load rating. No glue or strong clamp force to compensate for poor fit.
+
+## Validation and unresolved work
+
+Six printable parts are valid single solids and watertight, consistently wound single-component meshes. CAD checks cover actual STEP interference, part/part and PTZ interference, straight-up gun and bridge removal, driver access, rear wire probe, end-stop engagement, and nine sampled pan/tilt poses against the purchased mechanism's fixed/pan solids. All digital checks pass; see the report for the current count/results.
+
+Those poses do **not** check the existing body/head shell or a real hose/ribbon sweep. Gun reference tessellation has a known open-edge issue, so all fit/intersection operations use STEP solids, not the reference STL. Some purchased PTZ preview triangles are degenerate; Blender drops them only for rendering. Printable meshes pass their own checks.
+
+Source dimensions/omitted edge treatments must still be reconciled with physical hardware. No FEA, load/adhesion proof, weatherproofing, arming, electrical safety or powered-motion release. Camera fit test, compact camera bracket, independent head shell attachment and full head/body clearances remain next-stage work. The old shell geometry is not compatible merely because the carrier fits the PTZ.
+
+## Reproduce locally
+
+```sh
+.venv/bin/python cad/rebuild.py check
+.venv/bin/python cad/slice_carrier_v4.py
+blender --background --python cad/render_carrier_v4.py
+```
+
+Dimensions live in `cad/carrier_v4.json`; STEP identity is pinned in `cad/pump_reference.json`. All build dependencies and purchased PTZ BReps are included. See the README for environment setup and desktop executable configuration. Rendering is CAD-based; no generated concept imagery. No hardware is operated and no print job is sent.

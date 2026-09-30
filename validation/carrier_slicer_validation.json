@@ -6,35 +6,112 @@
     "0.20mm STRUCTURAL @MK4S 0.4",
     "--material-profile",
     "Generic PETG @MK4S HF0.4",
-    "--support-material",
-    "--support-material-auto",
-    "--support-material-style",
-    "snug",
+    "--no-support-material",
+    "--no-support-material-auto",
     "--brim-width",
     "2",
     "--skirts",
     "0",
     "--perimeters",
-    "4",
+    "5",
     "--fill-density",
-    "20%",
+    "25%",
     "--threads",
     "2",
     "--no-binary-gcode"
   ],
-  "part": {
-    "name": "head_payload_carrier_v2_2",
-    "sha256": "bd79a837c0be1dda201f5ac2404f1c7c14fe64618ab8c9af7107d11dda7de312",
-    "exit_code": 0,
-    "pass_check": true,
-    "errors": [],
-    "metadata": {
-      "filament used [mm]": "22094.84",
-      "filament used [g]": "67.49",
-      "estimated printing time (normal mode)": "2h 55m 31s",
-      "estimated printing time (silent mode)": "3h 0m 57s"
+  "parts": [
+    {
+      "name": "ptz_adapter_print",
+      "sha256": "86c79aa30cd4d312a78b05a74aff37e7529ca2bc1b4ed5ff7bb4cf2e8fb26948",
+      "exit_code": 0,
+      "pass_check": true,
+      "errors": [],
+      "metadata": {
+        "filament used [mm]": "7915.87",
+        "filament used [g]": "24.18",
+        "estimated printing time (normal mode)": "58m 18s",
+        "estimated printing time (silent mode)": "1h 0m 23s"
+      },
+      "log": "ptz_adapter_print.log",
+      "has_support_toolpaths": false
+    },
+    {
+      "name": "gun_deck_print",
+      "sha256": "fab16ba7b6ec91b508b99040839d130d2ed550ec779c2f335619afdc3709058f",
+      "exit_code": 0,
+      "pass_check": true,
+      "errors": [],
+      "metadata": {
+        "filament used [mm]": "7766.89",
+        "filament used [g]": "23.73",
+        "estimated printing time (normal mode)": "1h 9m 51s",
+        "estimated printing time (silent mode)": "1h 12m 40s"
+      },
+      "log": "gun_deck_print.log",
+      "has_support_toolpaths": false
+    },
+    {
+      "name": "rear_bridge_print",
+      "sha256": "9a5b3010c10b559bd16bbfaa9ecd20a5984367a9b2cadcd103060c7ddb53f7aa",
+      "exit_code": 0,
+      "pass_check": true,
+      "errors": [],
+      "metadata": {
+        "filament used [mm]": "2032.98",
+        "filament used [g]": "6.21",
+        "estimated printing time (normal mode)": "18m 48s",
+        "estimated printing time (silent mode)": "19m 24s"
+      },
+      "log": "rear_bridge_print.log",
+      "has_support_toolpaths": false
+    },
+    {
+      "name": "rear_fit_saddle_print",
+      "sha256": "7022463a43a86b22c80cccbe90b9fa07c82e4eb11d2018e57116a994392ac7ba",
+      "exit_code": 0,
+      "pass_check": true,
+      "errors": [],
+      "metadata": {
+        "filament used [mm]": "1844.24",
+        "filament used [g]": "5.63",
+        "estimated printing time (normal mode)": "19m 52s",
+        "estimated printing time (silent mode)": "20m 41s"
+      },
+      "log": "rear_fit_saddle_print.log",
+      "has_support_toolpaths": false
+    },
+    {
+      "name": "front_bridge_print",
+      "sha256": "264a7f1c12ff1c0b51f8fa5637405d4764892f0a8bea51ab3b0e14bc16a1f13d",
+      "exit_code": 0,
+      "pass_check": true,
+      "errors": [],
+      "metadata": {
+        "filament used [mm]": "1853.12",
+        "filament used [g]": "5.66",
+        "estimated printing time (normal mode)": "17m 53s",
+        "estimated printing time (silent mode)": "18m 26s"
+      },
+      "log": "front_bridge_print.log",
+      "has_support_toolpaths": false
+    },
+    {
+      "name": "front_fit_saddle_print",
+      "sha256": "c58aa41233abc28718848875932465719ef794190158761ebbfeeba86f8bfe52",
+      "exit_code": 0,
+      "pass_check": true,
+      "errors": [],
+      "metadata": {
+        "filament used [mm]": "1953.04",
+        "filament used [g]": "5.97",
+        "estimated printing time (normal mode)": "20m 0s",
+        "estimated printing time (silent mode)": "20m 52s"
+      },
+      "log": "front_fit_saddle_print.log",
+      "has_support_toolpaths": false
     }
-  },
+  ],
   "all_pass": true,
-  "scope": "Diagnostic PETG slice only. Dry-fit carrier, not a powered assembly release. G-code is not a user print deliverable."
+  "scope": "Diagnostic only; trial rear saddle/bridge first. No automatic full carrier or powered release."
 }

@@ -1,13 +1,13 @@
-# Materials and hardware BOM — 2026-09-29
+# Materials and hardware BOM — 2026-09-30
 
 Current procurement/fit state. Not a final shopping list: unknown electrical ratings and fastener lengths must be resolved before ordering. Geometry files are not proof of fit.
 
-**2026-09-30 update:** V2.2 failed during support removal and is withdrawn. Rows below describing its carrier/retainer are historical. Local V3 has two screw-retaining bridges; next test is one saddle coupon plus one bridge (~11.13 g PETG), with two M3 nuts and nominal M3×8 screws, subject to engagement verification. V3 source/artifacts are not yet bundled here; see README. Full mount and shell printing remain held.
+**Current carrier: V4, derived from the user's STEP.** Rear and front fit tests are pending. This public pack includes all six prototype print files; print the small fit pairs before adapter/deck. Head/body shells and camera mount remain held. See the print guide for placement and screw engagement checks.
 
 | Item | Qty | Status / requirement |
 |---|---:|---|
 | Yahboom 2DOF PTZ mechanism | 1 | Owned; STEP identity and printed top-hole pattern confirmed. Pan 20 kg·cm, tilt 25 kg·cm; both marked DC 6–7.4 V. Stall current, 3.3 V signal compatibility and travel unknown |
-| Donor electric water gun/pump with nozzle/button/tube | 1 | Owned. Housing + nozzle 132.25 × 32 × 24 mm; ~75 g estimate; front ~18 mm round. Elbow/hose excluded from envelope. Motor start/run current and switch topology unverified |
+| Donor electric water gun/pump with nozzle/button/tube | 1 | Owned. Authoritative user STEP main casing/nozzle envelope 132.1 × 34 × 25.4 mm; physical body reported 29 mm, projecting features 32 mm. STEP/physical differences and omitted edge treatments need fit testing. Mass ~75 g estimate; motor current/switch topology unverified |
 | Raspberry Pi 5, 8 GB | 1 | Received, OS Lite 64-bit/SSH working, packages updated; no actuator connection |
 | Pi kit official 27 W USB-C supply | 1 | Use for Pi bench operation; independent from unapproved common-supply conversion |
 | 32 GB microSD | 1 | In use, ~24 GB free after installation; not the originally advertised 128 GB kit storage |
@@ -23,10 +23,14 @@ Current procurement/fit state. Not a final shopping list: unknown electrical rat
 | Pi USB-C input interface for single-adapter scheme | 1 if used | Not selected; current capacity/voltage and USB-C negotiation not established by adapter's 10 A label |
 | 500 ml bottle/cap | 1 | Not selected; CAD placeholder Ø90 × 110 mm total. Update to actual bottle before holder design |
 | Pickup tube, cap barb/seal, make-up-air vent, tube retention | 1 set | Size to real tube/bottle; check priming/suction lift and leak isolation |
-| PETG | As sliced | Carrier baseline 67.49 g including supports/brim; coupons already tested. Final shell quantities not released |
-| Printed gun retaining bridge/lid | TBD | Requested, **not yet designed**. Wait for carrier fit; aim to reuse carrier |
-| Thin compliant nonconductive padding | As needed | Select after fit; prevent gun rolling without crushing case. Nominal rear-cap allowance 0.5 mm, estimated main-face gap ~2 mm |
-| M3 carrier-to-PTZ screws | 4 | 4 mm printed mounting crossbar; choose engagement after checking actual bracket/clearance. Do not copy long coupon-test bolts |
+| PETG V4 rear fit pair | 1 saddle + 1 bridge | Diagnostic total 11.84 g; ~38m40; physical fit pending |
+| PETG V4 front fit pair | 1 saddle + 1 bridge | Diagnostic total 11.63 g; ~37m53; physical fit pending |
+| PETG V4 adapter + deck | 1 each | Diagnostic total 47.91 g; print after both fit pairs pass; reuse V4 bridges, not standalone saddles |
+| Printed V4 retaining bridges | 2 distinct | Front/rear profiles differ; do not swap or reuse V3 parts |
+| M3 bridge fasteners | 4 screws + 4 nuts | Nominal M3×8 with 4 mm foot + 4 mm ear, no extra washer allowance; verify engagement |
+| M3 deck-to-adapter fasteners | 4 screws + 4 nuts | Nominal M3×10, 4 mm flange + 6 mm adapter; verify underside clearance |
+| Thin compliant nonconductive padding | If needed | Select only after measured fit; nominal CAD profile clearance 0.4 mm, not a prescribed pad thickness |
+| M3 carrier-to-PTZ screws | 4 | Length unresolved. 6 mm adapter counterbored to leave 2.8 mm below screw head; verify actual head, bracket engagement and underside clearance |
 | M3 screws/nuts/washers for enclosure/chassis | TBD | Fit: 3.4 mm printed clearance / 5.7 mm nut AF / 2.6 mm pocket depth; lengths/counts follow final joints |
 | M3 chassis rods | 4 provisional | Approximately 190 mm; verify assembled stack before cutting/buying |
 | Camera M2 and Pi mounting hardware/spacers | As needed | Confirm actual holes, engagement, PCB underside and electrical isolation; camera coupon pending |

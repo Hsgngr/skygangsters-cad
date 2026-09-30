@@ -7,7 +7,8 @@
     "notes": "Four chassis rods stay attached here when bottom plate is removed.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/structural_base_ring.brep"
+    "file": "cad/latest/components/structural_base_ring.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "removable_bottom_bottle_tray",
@@ -17,7 +18,8 @@
     "notes": "Four M3 screws; support owl before removal. Disconnect pickup before lowering bottle. Not a certified watertight tray.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/removable_bottom_bottle_tray.brep"
+    "file": "cad/latest/components/removable_bottom_bottle_tray.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "body_shell_front",
@@ -27,7 +29,8 @@
     "notes": "Body: upright on bottom rim, use brim; supports for bolt lugs only. M3 seam joints.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/body_shell_front.brep"
+    "file": "cad/latest/components/body_shell_front.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "body_shell_rear",
@@ -37,7 +40,8 @@
     "notes": "Body: upright on bottom rim, use brim; supports for bolt lugs only. M3 seam joints.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/body_shell_rear.brep"
+    "file": "cad/latest/components/body_shell_rear.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "frame_spacer_lower_1",
@@ -47,7 +51,8 @@
     "notes": "Slide over M3 threaded rod; print upright with brim.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/frame_spacer_lower_1.brep"
+    "file": "cad/latest/components/frame_spacer_lower_1.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "frame_spacer_lower_2",
@@ -57,7 +62,8 @@
     "notes": "Slide over M3 threaded rod; print upright with brim.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/frame_spacer_lower_2.brep"
+    "file": "cad/latest/components/frame_spacer_lower_2.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "frame_spacer_lower_3",
@@ -67,7 +73,8 @@
     "notes": "Slide over M3 threaded rod; print upright with brim.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/frame_spacer_lower_3.brep"
+    "file": "cad/latest/components/frame_spacer_lower_3.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "frame_spacer_lower_4",
@@ -77,7 +84,8 @@
     "notes": "Slide over M3 threaded rod; print upright with brim.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/frame_spacer_lower_4.brep"
+    "file": "cad/latest/components/frame_spacer_lower_4.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "frame_spacer_middle_1",
@@ -87,7 +95,8 @@
     "notes": "Slide over M3 threaded rod; print upright with brim.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/frame_spacer_middle_1.brep"
+    "file": "cad/latest/components/frame_spacer_middle_1.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "frame_spacer_middle_2",
@@ -97,7 +106,8 @@
     "notes": "Slide over M3 threaded rod; print upright with brim.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/frame_spacer_middle_2.brep"
+    "file": "cad/latest/components/frame_spacer_middle_2.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "frame_spacer_middle_3",
@@ -107,7 +117,8 @@
     "notes": "Slide over M3 threaded rod; print upright with brim.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/frame_spacer_middle_3.brep"
+    "file": "cad/latest/components/frame_spacer_middle_3.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "frame_spacer_middle_4",
@@ -117,7 +128,8 @@
     "notes": "Slide over M3 threaded rod; print upright with brim.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/frame_spacer_middle_4.brep"
+    "file": "cad/latest/components/frame_spacer_middle_4.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "frame_spacer_upper_1",
@@ -127,7 +139,8 @@
     "notes": "Slide over M3 threaded rod; print upright with brim.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/frame_spacer_upper_1.brep"
+    "file": "cad/latest/components/frame_spacer_upper_1.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "frame_spacer_upper_2",
@@ -137,7 +150,8 @@
     "notes": "Slide over M3 threaded rod; print upright with brim.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/frame_spacer_upper_2.brep"
+    "file": "cad/latest/components/frame_spacer_upper_2.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "frame_spacer_upper_3",
@@ -147,7 +161,8 @@
     "notes": "Slide over M3 threaded rod; print upright with brim.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/frame_spacer_upper_3.brep"
+    "file": "cad/latest/components/frame_spacer_upper_3.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "frame_spacer_upper_4",
@@ -157,7 +172,8 @@
     "notes": "Slide over M3 threaded rod; print upright with brim.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/frame_spacer_upper_4.brep"
+    "file": "cad/latest/components/frame_spacer_upper_4.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "controller_strap_tray_-1",
@@ -167,7 +183,8 @@
     "notes": "Universal strap tray: select board before detailing hole pattern; add insulating spacers.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/controller_strap_tray_-1.brep"
+    "file": "cad/latest/components/controller_strap_tray_-1.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "controller_strap_tray_1",
@@ -177,7 +194,8 @@
     "notes": "Universal strap tray: select board before detailing hole pattern; add insulating spacers.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/controller_strap_tray_1.brep"
+    "file": "cad/latest/components/controller_strap_tray_1.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "pi_tray_wet_bay_roof",
@@ -187,7 +205,8 @@
     "notes": "M2.5 Pi mounting pattern 58 x 49 mm; sealed plumbing routing outside roof; not leak-certified.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/pi_tray_wet_bay_roof.brep"
+    "file": "cad/latest/components/pi_tray_wet_bay_roof.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "ptz_base_adapter",
@@ -197,7 +216,8 @@
     "notes": "Official STEP base pattern; M3 bolts + nuts. Verify foot contact and screw length on actual mechanism.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/ptz_base_adapter.brep"
+    "file": "cad/latest/components/ptz_base_adapter.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "camera_ribbon_guide",
@@ -207,7 +227,8 @@
     "notes": "Two M3 bolts to deck tab; loose soft straps only, not a sharp ribbon fold. Hand-verify flex loop before powering servos.",
     "group": "fixed",
     "print_status": "held",
-    "file": "cad/latest/components/camera_ribbon_guide.brep"
+    "file": "cad/latest/components/camera_ribbon_guide.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "head_shell_front",
@@ -217,7 +238,8 @@
     "notes": "Head: seam face on bed; supports inside open half. M3 seam joints.",
     "group": "tilt",
     "print_status": "held",
-    "file": "cad/latest/components/head_shell_front.brep"
+    "file": "cad/latest/components/head_shell_front.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "head_shell_rear",
@@ -227,18 +249,8 @@
     "notes": "Head: seam face on bed; supports inside open half. M3 seam joints.",
     "group": "tilt",
     "print_status": "held",
-    "file": "cad/latest/components/head_shell_rear.brep"
-  },
-  {
-    "name": "head_payload_carrier",
-    "module": "head",
-    "color": "#7297aa",
-    "kind": "print",
-    "notes": "M3 to PTZ; M2 camera bolts/nuts, 5 mm rear standoff; straps retain adjustable gun envelope. Supports required.",
-    "group": "tilt",
-    "revision": "CARRIER-2.2-FIT-TEST",
-    "print_status": "unpowered_dry_fit_only_print_in_progress",
-    "file": "cad/latest/components/head_payload_carrier.brep"
+    "file": "cad/latest/components/head_shell_rear.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "ptz_fixed",
@@ -248,7 +260,8 @@
     "notes": "",
     "group": "fixed",
     "print_status": "not_a_print_part",
-    "file": "cad/latest/components/ptz_fixed.brep"
+    "file": "cad/latest/components/ptz_fixed.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "ptz_pan",
@@ -258,7 +271,8 @@
     "notes": "",
     "group": "pan",
     "print_status": "not_a_print_part",
-    "file": "cad/latest/components/ptz_pan.brep"
+    "file": "cad/latest/components/ptz_pan.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "ptz_tilt",
@@ -268,7 +282,8 @@
     "notes": "",
     "group": "tilt",
     "print_status": "not_a_print_part",
-    "file": "cad/latest/components/ptz_tilt.brep"
+    "file": "cad/latest/components/ptz_tilt.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "pi5",
@@ -278,7 +293,8 @@
     "notes": "",
     "group": "fixed",
     "print_status": "not_a_print_part",
-    "file": "cad/latest/components/pi5.brep"
+    "file": "cad/latest/components/pi5.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "cooling_reserve",
@@ -288,7 +304,8 @@
     "notes": "",
     "group": "fixed",
     "print_status": "not_a_print_part",
-    "file": "cad/latest/components/cooling_reserve.brep"
+    "file": "cad/latest/components/cooling_reserve.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "controller",
@@ -298,7 +315,8 @@
     "notes": "",
     "group": "fixed",
     "print_status": "not_a_print_part",
-    "file": "cad/latest/components/controller.brep"
+    "file": "cad/latest/components/controller.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "pump_interface",
@@ -308,7 +326,8 @@
     "notes": "",
     "group": "fixed",
     "print_status": "not_a_print_part",
-    "file": "cad/latest/components/pump_interface.brep"
+    "file": "cad/latest/components/pump_interface.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "bottle_500ml",
@@ -318,7 +337,8 @@
     "notes": "",
     "group": "fixed",
     "print_status": "not_a_print_part",
-    "file": "cad/latest/components/bottle_500ml.brep"
+    "file": "cad/latest/components/bottle_500ml.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   },
   {
     "name": "camera_module3",
@@ -328,51 +348,7 @@
     "notes": "",
     "group": "tilt",
     "print_status": "not_a_print_part",
-    "file": "cad/latest/components/camera_module3.brep"
-  },
-  {
-    "name": "pump_housing",
-    "file": "cad/latest/components/pump_housing.brep",
-    "module": "reference",
-    "group": "tilt",
-    "kind": "purchased_proxy",
-    "color": "#ED650C",
-    "print_status": "not_a_print_part"
-  },
-  {
-    "name": "pump_motor_window",
-    "file": "cad/latest/components/pump_motor_window.brep",
-    "module": "reference",
-    "group": "tilt",
-    "kind": "purchased_proxy",
-    "color": "#787F83",
-    "print_status": "not_a_print_part"
-  },
-  {
-    "name": "pump_nozzle",
-    "file": "cad/latest/components/pump_nozzle.brep",
-    "module": "reference",
-    "group": "tilt",
-    "kind": "purchased_proxy",
-    "color": "#DC9C25",
-    "print_status": "not_a_print_part"
-  },
-  {
-    "name": "pump_elbow_estimated",
-    "file": "cad/latest/components/pump_elbow_estimated.brep",
-    "module": "reference",
-    "group": "tilt",
-    "kind": "purchased_proxy",
-    "color": "#DC9C25",
-    "print_status": "not_a_print_part"
-  },
-  {
-    "name": "pump_hose_stub_estimated",
-    "file": "cad/latest/components/pump_hose_stub_estimated.brep",
-    "module": "reference",
-    "group": "tilt",
-    "kind": "purchased_proxy",
-    "color": "#AFCACD",
-    "print_status": "not_a_print_part"
+    "file": "cad/latest/components/camera_module3.brep",
+    "assembly_status": "Retained baseline component; not checked with V4 carrier"
   }
 ]
