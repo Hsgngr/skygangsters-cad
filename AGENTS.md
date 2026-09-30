@@ -3,8 +3,8 @@
 Read README.md, BOM.md and Devlog.md first. This is a CAD-only public snapshot, not the original robotics/vision repository.
 
 - Keep secrets, private notes/photos, network configuration, datasets/weights and company material out of this public repo.
-- The carrier is already printing. Wait for user fit results before changing its released files or designing the requested retaining bridge. No cable ties are available.
-- Current printable release is carrier V2.2 for unpowered dry fit only. Camera coupon pending. Head/body shells held. Do not equate digital checks with physical print, strength, cable-sweep or powered-operation approval.
+- V2.2 failed during PETG support removal and is withdrawn. The original workspace now has a compact V3 gun cradle/adapter and retaining bridges; those sources/artifacts are NOT yet packaged here. See README toolchain/transfer notes before continuing on another laptop. No cable ties are available.
+- Await physical fit of the local V3 saddle coupon plus one bridge. Do not reprint V2.2; camera coupon and head/body shells remain held. Do not equate digital checks with physical print, strength, cable-sweep or powered-operation approval.
 - Keep head/body modular about the shared PTZ datums. Keep dimensions parametric. Avoid gratuitous cosmetic changes until fit is established.
 - Use cad/rebuild.py; candidates go to ignored cad/candidates/. Never overwrite a released STL without explicit intent, tests and updated status.
 - Validate CAD solids, mesh manifoldness, clearances, print orientation, support removal, real hardware fit and safe screw engagement. Re-slice changed parts. Update BOM/devlog and manifest/hashes with releases.

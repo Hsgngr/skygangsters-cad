@@ -1,5 +1,7 @@
 # Carrier V2.2 — PETG dry-fit print
 
+> **Withdrawn 2026-09-30:** this print broke at both pump-bed posts and the rear arm during support removal. Do not follow the historical print recommendation below. See the README for current V3 small-fit-test status and software handoff; V3 files are not yet bundled here.
+
 2026-09-29. **Print this carrier only; head shells and body are not released.** This replaces the older carrier for the next physical fit test, not the whole V2.1 assembly.
 
 **Latest physical status:** this carrier is printing. The user has no straps/cable ties and prefers a printed retaining bridge/lid. Wait for completion and inspect gun seating before designing it; no retainer exists yet. Strap instructions below describe the original retention option, not a requirement to purchase ties or a claim that the gun is already secured.

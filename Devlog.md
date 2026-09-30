@@ -2,6 +2,12 @@
 
 Curated project-only record. Older geometry versions, original private devlog, photos and credentials are deliberately not published.
 
+## 2026-09-30 — physical failure and software handoff documentation
+
+- PETG V2.2 carrier broke at both pump-bed posts and the long rear shell-arm root during support removal. Withdraw its print recommendation. User also reports excessive length/bed width and blocked rear motor wires.
+- Original workspace now has a separate V3 prototype: gun shifted rearward to align its length midpoint with PTZ mount, curved open-back cradle, broad flat adapter and separately printed retaining bridges. Next physical test is only the small saddle coupon and one bridge. These V3 files are not yet packaged in this handoff; included CAD remains the withdrawn V2.2 layout.
+- Added verified software versions, new-laptop setup, script/function map, formats, slicing presets and Mac-specific path/dependency caveats to README. Distinguishes commands runnable in this checkout from the local V3 workflow. No geometry or hardware changed in this documentation update.
+
 ## 2026-09-29 — current handoff
 
 - Created one current CAD snapshot: latest retained modular shells/body, current V2.2 carrier and rounded photo-derived pump. Excluded earlier carriers, concepts, block/scan pump models and old whole-assembly exports. Combined assembly is a review aid, not a full print release.

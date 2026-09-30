@@ -2,6 +2,8 @@
 
 Current procurement/fit state. Not a final shopping list: unknown electrical ratings and fastener lengths must be resolved before ordering. Geometry files are not proof of fit.
 
+**2026-09-30 update:** V2.2 failed during support removal and is withdrawn. Rows below describing its carrier/retainer are historical. Local V3 has two screw-retaining bridges; next test is one saddle coupon plus one bridge (~11.13 g PETG), with two M3 nuts and nominal M3×8 screws, subject to engagement verification. V3 source/artifacts are not yet bundled here; see README. Full mount and shell printing remain held.
+
 | Item | Qty | Status / requirement |
 |---|---:|---|
 | Yahboom 2DOF PTZ mechanism | 1 | Owned; STEP identity and printed top-hole pattern confirmed. Pan 20 kg·cm, tilt 25 kg·cm; both marked DC 6–7.4 V. Stall current, 3.3 V signal compatibility and travel unknown |
